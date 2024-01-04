@@ -1,11 +1,12 @@
 # https://leetcode.com/problems/container-with-most-water/
 from typing import List
 
+
 class Solution:
     def maxArea(self, height: List[int]) -> int:
         max_area = 0
         l, r = 0, len(height) - 1
-        
+
         while l < r:
             area = min(height[l], height[r]) * (r - l)
             max_area = max(area, max_area)
